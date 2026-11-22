@@ -1,0 +1,21 @@
+Copyright (c) 2026 Ar Kar Phyo. All rights reserved.
+
+This repository is published for viewing, study and portfolio review only.
+
+No licence is granted. Without prior written permission from the copyright
+holder you may NOT copy, reproduce, modify, merge, publish, distribute,
+sublicense, sell, host, deploy or otherwise use this work, in whole or in part,
+including the user interface design, the page layouts, the stylesheets, the
+scripts, the written documentation and the overall concept as described.
+
+Reading the files on GitHub for personal learning is allowed. Quoting short
+excerpts with clear attribution (for example in a review or a class report)
+is allowed under normal fair-use / fair-dealing rules.
+
+The compiled Tailwind CSS utilities in ui/assets/css/tailwind.css are
+generated from Tailwind CSS (MIT licence, (c) Tailwind Labs, Inc.); that
+licence applies to those generated utilities only.
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+For permission requests, open an issue on this repository.

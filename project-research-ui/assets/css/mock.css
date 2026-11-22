@@ -1,0 +1,93 @@
+/* Project Name - extra styles for the static mock preview. Copyright (c) 2026 Ar Kar Phyo. All rights reserved. */
+body { background: radial-gradient(1200px 700px at 70% -10%, #23263a 0%, #141416 60%) fixed, #141416; }
+.mock-banner { position: relative; z-index: 5; text-align: center; font-size: .75rem; padding: .35rem 1rem;
+  background: rgba(143,176,232,.12); color: #c9d7f2; border-bottom: 1px solid rgba(143,176,232,.25); }
+.mock-footer { text-align: center; font-size: .75rem; color: #8d8a86; padding: 2rem 1rem 3rem; }
+.min-w-\[860px\] { min-width: 860px; }
+.\!w-36 { width: 9rem !important; }
+.cm-msg.is-mine > div { background: rgba(51,70,196,.18); }
+.article-body h2 { font-family: 'Lora', Georgia, serif; font-size: 1.35rem; font-weight: 700; color: #f3f2ef; margin: 1.4rem 0 .5rem; }
+.article-body p { margin: 0 0 .9rem; }
+
+/* ===== Research-mock additions (not in the real style.css) ===== */
+
+/* Mock banner with the "Preview as" role switcher */
+.mock-banner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .45rem 1rem; }
+.preview-as { display: inline-flex; align-items: center; gap: .4rem; margin: 0; }
+.preview-as label { display: inline-flex; align-items: center; gap: .3rem; font-weight: 600; color: #dbe5f7; cursor: pointer; }
+.preview-as label svg { width: 15px; height: 15px; }
+.preview-as select { background: #1c1f2b; color: #eef2fb; border: 1px solid rgba(143,176,232,.45); border-radius: .4rem; padding: .15rem 1.6rem .15rem .5rem; font-size: .75rem; }
+.preview-as select:focus-visible { outline: 2px solid #8fb0e8; outline-offset: 2px; }
+.preview-go { font-size: .72rem; padding: .15rem .55rem; border-radius: .4rem; background: #3346c4; color: #fff; }
+.preview-go[hidden] { display: none; }
+
+/* Footer data-source note */
+.mock-footer { line-height: 1.6; }
+.mock-source { display: inline-flex; align-items: center; gap: .4rem; margin-top: .35rem; padding: .2rem .65rem; border-radius: 999px; border: 1px solid #34343a; color: #a09d98; }
+.mock-source svg { width: 14px; height: 14px; }
+
+/* Generated covers: the mock has no images, so every cover is a hue-based gradient with its title */
+.g-cover-fallback {
+  background:
+    radial-gradient(120% 90% at 85% 0%, hsl(var(--h) 55% 42% / .55), transparent 60%),
+    radial-gradient(90% 80% at 0% 100%, hsl(calc(var(--h) + 40) 50% 30% / .55), transparent 65%),
+    repeating-linear-gradient(135deg, rgba(255,255,255,.035) 0 2px, transparent 2px 14px),
+    #1d1e24;
+}
+.g-cover-fallback span { text-shadow: 0 1px 8px rgba(0,0,0,.55); }
+.g-cover.hero-cover { aspect-ratio: 21 / 8; max-height: 22rem; }
+.g-cover.hero-cover .g-cover-fallback span { font-size: 1.6rem; font-family: 'Lora', Georgia, serif; }
+.g-cover.teg-cover { aspect-ratio: 4 / 3; }
+.g-cover.mx-poster { position: absolute; inset: 0; }
+.g-cover.rq-thumb { width: 10rem; height: 7rem; flex: none; border-radius: .5rem; }
+.g-cover.rq-thumb .g-cover-fallback span { font-size: .8rem; }
+.mx-thumb .g-cover, .vcar-slide .g-cover, .home-card .g-cover, .hd-card .g-cover { width: 100%; height: 100%; }
+.mx-thumb .g-cover { aspect-ratio: 4 / 3; }
+.lightbox-art {
+  --h: 220; width: min(80vw, 56rem); aspect-ratio: 16 / 10; display: flex; align-items: flex-end; padding: 1.25rem;
+  border-radius: .6rem; font-weight: 800; font-size: 1.4rem; color: #fff; text-shadow: 0 1px 10px rgba(0,0,0,.6);
+  background: radial-gradient(120% 90% at 85% 0%, hsl(var(--h) 55% 45% / .65), transparent 60%),
+              radial-gradient(90% 80% at 0% 100%, hsl(calc(var(--h) + 40) 50% 32% / .6), transparent 65%), #1d1e24;
+}
+
+/* Placeholder QR codes (the real site drew real ones) */
+.mock-qr {
+  width: 5.5rem; height: 5.5rem; border-radius: .35rem; background-color: #f4f4f2; flex: none;
+  background-image:
+    linear-gradient(#111 0 0), linear-gradient(#111 0 0), linear-gradient(#111 0 0),
+    repeating-conic-gradient(#111 0 25%, transparent 0 50%);
+  background-size: 28% 28%, 28% 28%, 28% 28%, 12.5% 12.5%;
+  background-position: 6% 6%, 94% 6%, 6% 94%, 50% 50%;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  border: 6px solid #f4f4f2;
+}
+.twofa-demo { margin-top: 1rem; border: 1px dashed #3a3a40; border-radius: .6rem; padding: .7rem .9rem; }
+.twofa-demo summary { cursor: pointer; font-weight: 600; color: #cfd8ea; }
+.twofa-demo[open] summary { margin-bottom: .6rem; }
+
+/* Small helpers */
+.link-danger { color: #f3a49d; }
+.link-danger:hover { color: #ffd0cb; }
+.g-empty-filter.hidden { display: none; }
+.cm-msg.is-mine > .cm-bubble { background: rgba(51,70,196,.18); }
+mark { background: rgba(240,192,90,.28); color: inherit; border-radius: .15rem; padding: 0 .1rem; }
+.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.read-progress { position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 120; pointer-events: none; }
+.read-progress span { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #8fb0e8, #e2735f); }
+.reading-guide { position: fixed; left: 0; right: 0; top: 0; height: 44px; z-index: 110; pointer-events: none;
+  background: rgba(143,176,232,.10); border-top: 1px solid rgba(143,176,232,.25); border-bottom: 1px solid rgba(143,176,232,.25); }
+.reading-guide[hidden] { display: none; }
+@media print { .mock-banner, .mock-footer { display: none !important; } }
+
+/* Utilities missing from the trimmed tailwind.css build */
+.align-top { vertical-align: top; }
+.decoration-dotted { text-decoration-style: dotted; }
+.flex-nowrap { flex-wrap: nowrap; }
+.hover\:text-amber-200:hover { color: #fde68a; }
+.max-w-md { max-width: 28rem; }
+.ml-2 { margin-left: .5rem; }
+.not-italic { font-style: normal; }
+.p-3 { padding: .75rem; }
+.pt-14 { padding-top: 3.5rem; }
+.pl-thumb .g-cover { position: absolute; inset: 0; }
+.card-byline { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .25rem .75rem; }
